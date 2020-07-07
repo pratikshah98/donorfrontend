@@ -1,0 +1,148 @@
+<div class="form-body">
+    <div class="website-logo">
+        <a href="index.html">
+            <div class="logo">
+                <img class="logo-size" src="assets/images1/logo-light.svg" alt="">
+            </div>
+        </a>
+    </div>
+    <div class="row">
+        <div class="img-holder">
+            <div class="bg"></div>
+            <div class="info-holder">
+
+            </div>
+        </div>
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items1">
+                    <h3>Get more things done with Loggin platform.</h3>
+                    <p>Access to the most powerfull tool in the entire design and web industry.</p>
+                    <div class="page-links">
+                        <a routerLink="/">Login</a><a routerLink="/register" class="active">Register</a>
+                    </div>
+                    <form (ngSubmit)="addform(f)" #f="ngForm">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                    <!-- <div class="form-group" [class.has-error]="donoremailControl.invalid && donoremailControl.touched"
+                                        [class.has-success]="donoremailControl.valid">
+                                        <input required class="form-control" type="text" placeholder="E-mail Address" id="donor_email"  name="donor_email" [(ngModel)]="donor_email" #donoremailControl="ngModel" >
+                                            <span class="help-block" *ngIf="donoremailControl.invalid && donoremailControl.touched ">
+                                                Email Id is required.
+                                            </span>
+                                    </div> -->
+                                    <div class="form-group">
+                                        <input  #email="ngModel" type="email" [(ngModel)]="donor_email" name="donor_email" placeholder="Email" [class.is-invalid]="email.invalid && email.touched" required
+                                        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                        <span *ngIf="email.errors && (email.invalid || email.touched) && email.errors.pattern">Please enter a valid email address.</span>
+                                        <span *ngIf="email.errors && (email.invalid && email.touched) && email.errors.required">Email is required.</span>
+                                    </div>
+                            
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                    <!-- <div class="form-group" [class.has-error]="name.invalid && name.touched"
+                                        [class.has-success]="donoremailControl.valid">
+                                        <input class="form-control" type="text" name="donor_name" placeholder="Full Name" required [(ngModel)]="donor_name" #name="ngModel">
+                                                <span class="help-block" *ngIf="name.invalid && name.touched ">
+                                                Name is required.
+                                            </span>
+                                    </div> -->
+                                        <div class="form-group">
+                                            <input  #password="ngModel" type="password" [(ngModel)]="donor_password" name="donor_password" placeholder="Password" [class.is-invalid]="password.invalid && password.touched" required
+                                            pattern="^(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$">
+                                            <span *ngIf="password.errors && (password.invalid || password.touched) && password.errors.pattern">Please enter Password between 8 to 10 character..</span>
+                                            <span *ngIf="password.errors && (password.invalid && password.touched) && password.errors.required">Password is required.</span>
+                                         </div>
+                                
+                                    </div>
+                                    
+                             
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                   <div class="form-group">
+                                    <input  #name="ngModel" type="text" [(ngModel)]="donor_name" name="donor_name" placeholder="Full Name" [class.is-invalid]="name.invalid && name.touched" required
+                                    pattern="[a-zA-Z ]{3,}">
+                                    <span *ngIf="name.errors && (name.invalid || name.touched) && name.errors.pattern">Please enter a valid Name.</span>
+                                    <span *ngIf="name.errors && (name.invalid && name.touched) && name.errors.required">Name is required.</span>
+                                    </div>
+                        
+                            </div>
+                    
+                            <div class="col-12 col-sm-6">
+                               
+                                <div class="form-group">
+                                    <input  #phone="ngModel" type="number" [(ngModel)]="donor_contact" maxlength="10" mlength="10" name="donor_contact" placeholder="PhoneNo" [class.is-invalid]="phone.invalid && phone.touched" required
+                                    pattern="^((\\+91-?)|0)?[0-9]{10}$">
+                                    <span *ngIf="phone.errors && (phone.invalid || phone.touched) && phone.errors.pattern">Please enter a valid phoneno.</span>
+                                    <span *ngIf="phone.errors && (phone.invalid && phone.touched) && phone.errors.required">phoneNo is required.</span>
+                                    </div>
+                         
+                         
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-12">
+                                <!-- <input type="radio" class="form-control" id="male" name="donor_gender" value="male" [(ngModel)]="donor_gender" >
+                                <label for="male">Male</label>&nbsp;&nbsp;
+                                <input type="radio" class="form-control" id="female" name="donor_gender" value="female" [(ngModel)]="donor_gender">
+                                <label for="female">Female</label> -->
+                                <!-- <input type="radio" name="gender" value="male" checked="checked"> <span class="gen"  >Male</span>
+                                <input type="radio" name="gender" value="female" > <span class="gen" >Female</span><br> -->
+                                <label class="container">Male
+                                    <input type="radio" checked="checked" name="radio" [(ngModel)]="donor_gender" value="male">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="container">Female
+                                    <input type="radio" name="radio" [(ngModel)]="donor_gender" value="female">
+                                    <span class="checkmark"></span>
+                                  </label>
+                               
+                              </div>
+                          </div>
+                          <br>
+                        <div class="row">
+                            <div class="col-12 col-sm-12">
+                                    <!-- <div class="form-group" [class.has-error]="address.invalid && address.touched"
+                                    [class.has-success]="address.valid">
+                                    <textarea class="form-control" placeholder="Address" style="width:100%; height:87%;"name="donor_address" [(ngModel)]="donor_address" #address="ngModel" required></textarea>
+                                    <span class="help-block" *ngIf="address.invalid && address.touched ">
+                                            Address is required.
+                                        </span>
+                                </div>
+     -->
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Address" style="width:100%; height:87%;"name="donor_address" [(ngModel)]="donor_address" #address="ngModel" required></textarea>
+                                    <span *ngIf="address.errors && (address.invalid && address.touched) && address.errors.required">Address is required.</span>
+                                    </div>
+                        
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-sm-12">
+    
+                               
+                                <div class="form-group">
+                                    <input  #panno="ngModel" type="text" maxlength="10" minlength="10" [(ngModel)]="donor_PAN_no" name="donor_PAN_no" placeholder="PanNo" [class.is-invalid]="panno.invalid && panno.touched" required
+                                    pattern="^[A-Za-z]{5}[0-9]{4}[A-Za-z]$">
+                                    <span *ngIf="panno.errors && (panno.invalid || panno.touched) && panno.errors.pattern">Please enter a valid panno.</span>
+                                    <span *ngIf="panno.errors && (panno.invalid && panno.touched) && panno.errors.required">panno is required.</span>
+                                    </div>
+                         
+        
+                            </div>
+                              </div>
+  
+                              <div class="form-button">
+                            <button id="submit" type="submit" class="ibtn" (click)="onaddDonor()" [disabled]="f.invalid">Register</button>
+                        </div>
+                    </form>
+                    <div class="other-links">
+                        <span>Or register with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

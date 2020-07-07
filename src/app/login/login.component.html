@@ -1,0 +1,68 @@
+<div class="form-body">
+    <div class="website-logo">
+        <a href="index.html">
+            <div class="logo">
+                <img class="logo-size" src="assets/images1/logo-light.svg" alt="">
+            </div>
+        </a>
+    </div>
+    <div class="row">
+        <div class="img-holder">
+            <div class="bg"></div>
+            <div class="info-holder">
+
+            </div>
+        </div>
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Get more things done with Loggin platform.</h3>
+                    <p>Access to the most powerfull tool in the entire design and web industry.</p>
+                    <div class="page-links">
+                        <a routerLink="/" class="active">Login</a><a routerLink="/signup">Register</a>
+                    </div>
+                    <form (ngSubmit)="addform(f)" #f="ngForm">
+                        
+                        <!-- <div class="form-group" [class.has-error]="donoremailControl.invalid && donoremailControl.touched"
+                        [class.has-success]="donoremailControl.valid">
+                        <input required class="form-control" type="email" autocomplete="off" spellcheck="false" placeholder="E-mail Address" id="donor_email"  name="donor_email" [(ngModel)]="donor_email" #donoremailControl="ngModel"  >
+                            <span class="help-block" *ngIf="donoremailControl.invalid && donoremailControl.touched ">
+                                Email Id is required.
+                            </span>
+                        </div> -->
+                    <div class="form-group">
+                    <input  #email="ngModel" type="email" [(ngModel)]="donor_email" name="donor_email" placeholder="Email" [class.is-invalid]="email.invalid && email.touched" required
+                    pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <span *ngIf="email.errors && (email.invalid || email.touched) && email.errors.pattern">Please enter a valid email address.</span>
+                    <span *ngIf="email.errors && (email.invalid && email.touched) && email.errors.required">Email is required.</span>
+                    </div>
+        
+                <!-- <div class="form-group" [class.has-error]="donorpass.invalid">
+                      
+                         <input class="form-control" type="password"  placeholder="Password" required  name="donor_password" [(ngModel)]="donor_password" #donorpass="ngModel">
+                         <span class="help-block" *ngIf="donorpass.invalid && donorpass.touched">
+                             password Id is required.
+                         </span>
+                 </div> -->
+                 <div class="form-group">
+                    <input  #password="ngModel" type="password" [(ngModel)]="donor_password" name="donor_password" placeholder="Password" [class.is-invalid]="password.invalid && password.touched" required>
+                    <!-- pattern="^(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$"> -->
+                    <!-- <span *ngIf="password.errors && (password.invalid || password.touched) && password.errors.pattern">Please enter a minimum 8 to 10 character Password.</span> -->
+                    <span *ngIf="password.errors && (password.invalid && password.touched) && password.errors.required">Password is required.</span>
+                    </div>
+               
+                         <!-- <input type="checkbox" id="chk1" [(ngModel)]="rember1" name="rember1" ><label for="chk1">Remmeber me</label> -->
+                  <input type="checkbox" name="vehicle1" [(ngModel)]="rember" value="rember" (change)="onchange(rember?'true':'false')" style="margin-left:-45%; margin-top:0%; height:15px;"><label for="vehicle1" style="margin-left:-40%; margin-top:0%;"> Remeber Me</label><br>
+                  
+                  <div class="form-button">
+                            <button id="submit" type="submit" class="ibtn" (click)="onSubmit(rember)" [disabled]="f.invalid">Login</button> <a routerLink="/forget">Forget password?</a>    
+                        </div>
+                    </form>
+                    <div class="other-links">
+                        <span>Or login with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

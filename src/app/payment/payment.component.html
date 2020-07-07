@@ -1,0 +1,81 @@
+<app-header></app-header>
+<div data-scroll-index='1' class="make_donation_area section_padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section_title text-center mb-55">
+                    <h3><span>Make a Donation</span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form  class="donation_form" (ngSubmit)="addform(f)" #f="ngForm">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <div class="single_amount">
+                                <div class="input_field">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon1">Rs.</span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="transaction_amt" name="trasaction_amt"> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="single_amount">
+                               <div class="fixed_donat d-flex align-items-center justify-content-between">
+                                   <div class="select_prise">
+                                       <h4>Select NOP:</h4>
+                                   </div>
+                                   
+                                   <div>
+                                    <select [(ngModel)]="fk_nop_name" name="fk_nop_name" (change)="selectChangeHandler($event)" class="form-control" >
+                                        <option *ngFor="let item of nop_arr" [value]="item.nop_name" >{{item.nop_name}}</option>
+                                    </select>
+                                    <br>
+                                </div>
+                                   
+                               </div>
+                            </div>  
+                                <br>
+                            <div class="single_amount" *ngIf="flag">
+                                <div class="fixed_donat d-flex align-items-center justify-content-between">
+                                    <div class="select_prise">
+                                        <h4>Select NGO:</h4>
+                                    </div>
+
+                                    <div> 
+                                       
+                                    <select [(ngModel)]="pay_to_ngo_email" name="pay_to_ngo_email" (change)="selectChangeHandler($event)" class="form-control" >
+                                        <option *ngFor="let item of ngodetail_arr" [value]="item.ngo_email" >{{item.ngo_name}}</option>
+                                    </select>
+                                    </div>
+                                                                        
+                                </div>
+                             </div>
+ 
+                           
+                        </div>
+                      
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="donate_now_btn text-center">
+                    <!-- <a href="#" class="boxed-btn4">Donate Now</a> -->
+                    <button class="boxed-btn4" (click)="onAddPayment()">Donate Now</button>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
