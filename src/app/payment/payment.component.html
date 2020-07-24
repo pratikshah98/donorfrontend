@@ -19,8 +19,15 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon1">Rs.</span>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="transaction_amt" name="trasaction_amt"> 
+                                        <!-- <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="transaction_amt" name="trasaction_amt">  -->
                                         
+                                       
+                                            <input type="number" #transacationamt="ngModel" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="transaction_amt" name="trasaction_amt"
+                                            min="1" pattern="^[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*$"     [class.is-invalid]="transacationamt.invalid && transacationamt.touched" required>
+                                            <span *ngIf="transacationamt.errors && (transacationamt.invalid || transacationamt.touched) && transacationamt.errors.pattern">Please enter a valid Amount.</span>
+                                            <span *ngIf="transacationamt.errors && (transacationamt.invalid && transacationamt.touched) && transacationamt.errors.required">Amount is required.</span>
+                                            
+
                                     </div>
                                 </div>
                             </div>
@@ -29,20 +36,36 @@
                             <div class="single_amount">
                                <div class="fixed_donat d-flex align-items-center justify-content-between">
                                    <div class="select_prise">
-                                       <h4>Select NOP:</h4>
+                                       <h4 style="margin-top:10%;">Select NOP:</h4>
                                    </div>
                                    
                                    <div>
-                                    <select [(ngModel)]="fk_nop_name" name="fk_nop_name" (change)="selectChangeHandler($event)" class="form-control" >
-                                        <option *ngFor="let item of nop_arr" [value]="item.nop_name" >{{item.nop_name}}</option>
+                                       <input type="text" value="" [(ngModel)]="ngo_name" disabled="true" name="ngo_name" style="background-color: white; border:none; font-size:24px; margin-top:-20%;"/>
+                                        <br><br>
+                                    <select  #fknopname="ngModel" [(ngModel)]="fk_nop_name" name="fk_nop_name" (change)="selectChangeHandler($event)" class="form-control" *ngFor="let item of ngodetail_arr" style="width:70%; margin-left:10%; margin-top:-7%;"
+                                     
+                                    [class.is-invalid]="fknopname.invalid && fknopname.touched"  required>
+                                    <option *ngFor="let subngodetail of item.fk_ngo_nop_name?.split(',')" [value]="subngodetail" >{{subngodetail}}</option>
+                                      
+                                    <span *ngIf="fknopname.errors && (fknopname.invalid || fknopname.touched) && fknopname.errors.pattern">Please enter a valid Amount.</span>
+                                    <span *ngIf="fknopname.errors && (fknopname.invalid && fknopname.touched) && fknopname.errors.required" >Amount is required.</span>
+                         
                                     </select>
-                                    <br>
-                                </div>
                                    
+                                         <br>
+                                    <!-- <span *ngIf="fknopname.errors && (fknopname.invalid && fknopname.touched) && fknopname.errors.required">Amount is required.</span> -->
+                                    <!-- <select placeholder="Select Gender" name="" [(ngModel)]="model.gender" #gender="ngModel" [ngClass]="{ 'is-invalid': f.submitted && gender.invalid }" required>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                      </select> -->
+                                        
+                                </div>
+                                
                                </div>
                             </div>  
                                 <br>
-                            <div class="single_amount" *ngIf="flag">
+                            <!-- <div class="single_amount" *ngIf="flag">
                                 <div class="fixed_donat d-flex align-items-center justify-content-between">
                                     <div class="select_prise">
                                         <h4>Select NGO:</h4>
@@ -56,7 +79,7 @@
                                     </div>
                                                                         
                                 </div>
-                             </div>
+                             </div> -->
  
                            
                         </div>
@@ -70,7 +93,7 @@
             <div class="col-12">
                 <div class="donate_now_btn text-center">
                     <!-- <a href="#" class="boxed-btn4">Donate Now</a> -->
-                    <button class="boxed-btn4" (click)="onAddPayment()">Donate Now</button>
+                    <button class="boxed-btn4" (click)="onAddPayment()" [disabled]="f.invalid">Donate Now</button>
                 </div>
             </div>
             

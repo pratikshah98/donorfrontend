@@ -20,6 +20,7 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { BlogComponent } from './blog/blog.component';
+import { NgomoredetailComponent } from './ngomoredetail/ngomoredetail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { BlogComponent } from './blog/blog.component';
     EditprofileComponent,
     ChangepasswordComponent,
     AboutusComponent,
-    BlogComponent
+    BlogComponent,
+    NgomoredetailComponent
   ],
   imports: [
     BrowserModule,

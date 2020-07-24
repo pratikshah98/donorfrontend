@@ -14,6 +14,7 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { BlogComponent } from './blog/blog.component';
+import { NgomoredetailComponent } from './ngomoredetail/ngomoredetail.component';
 
 
 const routes: Routes = [
@@ -25,12 +26,13 @@ const routes: Routes = [
    {path:'menu',component:MenuComponent},
    {path:'contact',component:ContactComponent},
    {path:'nopdetail/:nop_name',component:NopdetailComponent},
-   {path:'payment',component:PaymentComponent},
+   {path:'payment/:ngo_email',component:PaymentComponent},
    {path:'viewprofile',component:ViewprofileComponent},
    {path:'editprofile/:donor_email',component:EditprofileComponent},
    {path:'changepassword',component:ChangepasswordComponent},
    {path:'about',component:AboutusComponent},
    {path:'blog',component:BlogComponent},
+   {path:'ngomoredetail/:ngo_email',component:NgomoredetailComponent},
     
   
 

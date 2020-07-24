@@ -11,9 +11,10 @@ export class NopdetailComponent implements OnInit {
 nop_name:string;
 ngodetail_arr:[]=[];
   constructor(private _nopdetailService:NopService,private _acRoute:ActivatedRoute,private _route:Router) { }
-  onDonoate()
+  onDonoate(ngo_email)
   {
-      this._route.navigate(['/payment']);
+    console.log(ngo_email);
+      this._route.navigate(['/ngomoredetail/',ngo_email]);
   }
  nopdetail()
  {
@@ -21,7 +22,8 @@ ngodetail_arr:[]=[];
   this._nopdetailService.getNgoDetailByNopName(this.nop_name).subscribe(
     (data:any)=>{
       this.ngodetail_arr=data;
-      console.log(this.ngodetail_arr)
+      console.log(this.ngodetail_arr);
+      
     });
   
 

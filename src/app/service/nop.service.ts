@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class NopService {
   private nop:string="http://localhost:3000/nop/";
   private ngodetailbynopname:string="http://localhost:3000/ngobynopname/";
-  
+  private ngo:string="http://localhost:3000/ngo/";
   constructor(private _http:HttpClient) { }
   getAllNop(){
     return this._http.get(this.nop);
@@ -15,5 +15,9 @@ export class NopService {
   getNgoDetailByNopName(nop_name){
     return this._http.get(this.ngodetailbynopname+nop_name);
   }
-  
+  getNgoDetailByNgoEmailId(ngo_email){
+    alert(ngo_email);
+    
+    return this._http.get(this.ngo+ngo_email);
+  }
 }

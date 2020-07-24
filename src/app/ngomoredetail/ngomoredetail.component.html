@@ -1,0 +1,88 @@
+ <app-header></app-header>
+ <!-- popular_causes_area_start  -->
+  <div class="popular_causes_area pt-120 cause_details ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12" *ngFor="let item of ngodetail_arr">
+                <div class="single_cause" >
+                    <div class="thumb">
+                        <img src="../../assets/img/causes/large_img.png" alt="">
+                    </div>
+                    <div class="causes_content">
+                        <div class="custom_progress_bar" > 
+                            <div class="progress" >
+                                <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="progres_count">
+                                        30%
+                                    </span>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="balance d-flex justify-content-between align-items-center">
+                            <i class="fa fa-envelope" style="font-size:30px">&nbsp;
+                                <span>{{item.ngo_email}}</span></i>  
+                                <i class="fa fa-user-plus" style="font-size:30px;"><span>&nbsp;{{item.ngo_registration_no}}</span></i>
+                        </div>
+                            
+                         <h4 >{{item.ngo_name}} </h4>
+                         <div class="balance d-flex justify-content-between align-items-center" >
+                         <br><br>
+                          <!-- <p> 
+                          <span >NGO Address : {{item.ngo_address}} </span>
+                            &nbsp;&nbsp;&nbsp; 
+                            <br><br>
+                            <span>NGO City : {{item.ngo_city}} </span>
+                           </p>
+                           <br><br>
+                           <p> 
+                            <span >NGO Landmark : {{item.ngo_landmark}} </span>
+                              &nbsp;&nbsp;&nbsp; 
+                              <br><br>
+                              <span>NGO State : {{item.ngo_state}} </span>
+                             </p>
+                             <br><br>
+                              -->
+                             <div style="width:60%; height:30%; " >
+                                <i class="fa fa-address-card-o" style="font-size:24px">
+                                
+                                <!-- <span style="margin-left:-1110px; ">NGO Address: </span> -->
+                                &nbsp;
+                                <span>{{item.ngo_address}},</span> 
+                                <br><span style="margin-left:8.3%;">{{item.ngo_city}},</span> 
+                                 <br><span style="margin-left:8.3%;">{{item.ngo_landmark}},</span>
+                                <br><span style="margin-left:8.3%;">{{item.ngo_state}},</span> 
+                                 <br><span style="margin-left:8.3%;">{{item.ngo_pincode}}</span> 
+                               
+                                  
+                                  <!-- <span>NGO City : {{item.ngo_city}} </span> -->
+                                
+                                </i>
+                                </div>   
+                                <div style="width:40%; height:100%; margin-top:-7.7%; margin-left:20%;" >
+                                    <i class="fa fa-mobile" style="font-size:32px">&nbsp;
+                                    <span >{{item.ngo_contact}}</span></i>
+                                    
+                                   
+                                
+                                </div>
+                                   
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="donate_now_btn text-center">
+                                    <!-- <a href="#" class="boxed-btn4">Donate Now</a> -->
+                                    <button class="boxed-btn4" (click)="onAddPayment(item.ngo_email)">Donate Now</button>
+                                </div>
+                            </div>
+                            
+                
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- popular_causes_area_end  -->
+<app-footer></app-footer>
