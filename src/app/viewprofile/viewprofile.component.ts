@@ -40,6 +40,7 @@ donor_PAN_no:string;
         this.donor_PAN_no=data[0].donor_PAN_no;
        
       });
+      
  
   }
 

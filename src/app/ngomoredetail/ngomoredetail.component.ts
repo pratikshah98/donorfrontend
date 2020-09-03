@@ -11,6 +11,7 @@ import { Ngo } from '../classes/ngo';
 export class NgomoredetailComponent implements OnInit {
 ngo_email:string;
 ngodetail_arr:Ngo[]=[];
+ngonop_arr:any[]=[];
   constructor(private _ngoService:NopService,private _AcRoute:ActivatedRoute,private _route:Router) { }
   onAddPayment(ngo_email){
     this._route.navigate(['/payment/',ngo_email]);
@@ -23,6 +24,12 @@ ngodetail_arr:Ngo[]=[];
         console.log(this.ngodetail_arr);
         
       });
+      this._ngoService.getNgoNopByNgoId(this.ngo_email).subscribe(
+        (data:any)=>{
+          this.ngonop_arr=data;
+          console.log(this.ngonop_arr);
+          
+        });
    
   }
 

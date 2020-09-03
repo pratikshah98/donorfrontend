@@ -11,16 +11,16 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6" *ngFor="let item of ngodetail_arr"  style="padding:20px;">
+            <div class="col-lg-4 col-md-6" *ngFor="let item of ngodetail_arr"  style="padding:20px;" >
                                 <div class="single_volenteer">
                     <div class="volenteer_thumb">
-                        <img src="../../assets/img/volenteer/1.png" alt="">
+                        <img src="{{'http://localhost:3000/logo_images/'+item.ngo_logo}}"  alt="" style="height:270px; width:230px;">
                     </div>
-                    <div class="voolenteer_info d-flex align-items-end">
-                        <div class="social_links">
-                            <ul>
+                    <div class="voolenteer_info d-flex align-items-end" >
+                        <div class="social_links" >
+                            <ul >
                                 <li>
-                                    <a href="#"> <i class="fa fa-facebook"></i> </a>
+                                    <a href="{{item.facebook}}"> <i class="fa fa-facebook"></i> </a>
                                 </li>
                                 <li>
                                     <a href="#"> <i class="fa fa-pinterest"></i> </a>

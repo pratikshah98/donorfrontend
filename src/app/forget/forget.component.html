@@ -24,8 +24,8 @@
                     <div class="form-group">
                             <input  #email="ngModel" type="email" [(ngModel)]="donor_email" name="donor_email" placeholder="Email" [class.is-invalid]="email.invalid && email.touched" required
                             pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                            <span *ngIf="email.errors && (email.invalid || email.touched) && email.errors.pattern">Please enter a valid email address.</span>
-                            <span *ngIf="email.errors && (email.invalid && email.touched) && email.errors.required">Email is required.</span>
+                            <span *ngIf="email.errors && (email.invalid || email.touched) && email.errors.pattern" style="color:red; font-size:14px;">Please enter a valid email address.</span>
+                            <span *ngIf="email.errors && (email.invalid && email.touched) && email.errors.required" style="color:red; font-size:14px;">Email is required.</span>
                             </div>
                 
                         <div class="form-button full-width">

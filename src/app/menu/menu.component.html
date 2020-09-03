@@ -17,14 +17,15 @@
                     <div class="single_reson" >
                         <div class="thum" >
                             <div class="thum_1">
-                                <img src="../../assets/img/help/1.png" alt="">
+                                <img src="https://source.unsplash.com/1600x1600/?{{item.nop_name}}" alt="" style="height:370px; width:650px;">
                             </div>
                         </div>
                         <div class="help_content">
                             <h4>{{item.nop_name}}</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
+                            <!-- <p>Lorem ipsum, or lipsum as it is 
                                 sometimes known, is dummy 
-                                text used in laying out print.</p>
+                                text used in laying out print.</p> -->
+                                <p>{{item.nop_desc}}</p>
                             <!-- <a routerLink="/nopdetail/item.nop_id" class="read_more">Read More</a> -->
                             <button (click)="onReadMore(item.nop_name)" style="border:none; background: white;" class="read_more">Read More</button>
                         </div>

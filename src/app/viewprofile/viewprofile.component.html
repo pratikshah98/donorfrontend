@@ -7,7 +7,7 @@
      <legend>
      <!-- <span class="number"></span> -->
      View profile Form</legend>
-        <img src="../../assets/images1/img2.jpg" class="viewpro">
+        <img src="../../assets/images1/viewpro3.png" class="viewpro">
        <br><br> 
        <span>Donor_Email</span>
        <input type="email" placeholder="Enter Your Email *" disabled="true"  [(ngModel)]="donor_email" name="donor_email">
@@ -20,14 +20,14 @@
         <input type="radio" name="donor_gender" value="female" [(ngModel)]="donor_gender" disabled="true"> <span class="gen">Female</span><br>
         <br>
         <span>Donor_Address</span>
-        <input type="text"  placeholder="Your Address Is *" [(ngModel)]="donor_address" name="donor_address">
+        <input type="text"  placeholder="Your Address Is *" [(ngModel)]="donor_address" name="donor_address" disabled="true" >
         <span>Donor_Phoneno</span>
         <input type="number"  placeholder="Enter Your Phoneno *" disabled="true"  [(ngModel)]="donor_contact" name="donor_contact">
          <span>Donor_PanNo</span>
          <input type="text"  placeholder="Enter Your Pasword *" disabled="true" value="p@123" [(ngModel)]="donor_PAN_no" name="donor_PAN_no">
     </fieldset>
     </form>
-    <a ><button class="btn2" (click)="onEdit()">Edit Profile</button></a>
+    <a ><button class="btn2" (click)="onEdit()">Edit Profile</button></a>&nbsp;&nbsp;
     <a ><button class="btn2" (click)="onCancel()">Cancel</button></a>
     
     </div>

@@ -29,12 +29,14 @@ onDone()
       this.updonor_arr.push(new donors(this.donor_name,this.donor_gender,this.donor_contact,this.donor_address,this.donor_PAN_no,this.donor_email));
             console.log(data);
             alert("record updated succesfully");
-            this._route.navigate(['viewprofile']);
+            this._route.navigate(['/viewprofile']);
            }
    );
 
 }
-  onChange(){}
+  onChange(){
+    this._route.navigate(['/changepassword']);
+  }
 
   ngOnInit(): void {
   this.donor_email=this._AcRoute.snapshot.params['donor_email'];

@@ -10,6 +10,7 @@ export class DonorService {
   private forgetpassword:string="http://localhost:3000/forgetpassword/";
   private chanagepassword:string="http://localhost:3000/changepassword/";
   private transaction:string="http://localhost:3000/transaction/";
+  private get_news_url:string='https://newsapi.org/v2/top-headlines?q=NGO&apiKey=5c083635b38944afa9b1fe41adbb30d4';
   constructor(private _http:HttpClient) { }
   getLogin(item:donor){
     let body=JSON.stringify(item);
@@ -46,6 +47,10 @@ export class DonorService {
     let body=JSON.stringify(item);
     let head1=new HttpHeaders().set('Content-Type','application/json');
     return this._http.post(this.transaction,body,{headers:head1});
+  }
+  getnews()
+  {
+    return this._http.get(this.get_news_url);
   }
 
 

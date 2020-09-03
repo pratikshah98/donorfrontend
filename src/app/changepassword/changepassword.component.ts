@@ -43,7 +43,9 @@ onDone()
 
 }
 onCancel()
-{}
+{
+  this._route.navigate(['/menu']);
+}
 
   ngOnInit(): void {
   this.donor_email=localStorage.getItem('donor_email');
