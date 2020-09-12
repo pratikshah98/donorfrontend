@@ -19,6 +19,7 @@ export class ForgetComponent implements OnInit {
   }
   
   onForget(f){
+    console.log(this.donor_email);
   this._donor.getPasswordById(this.donor_email).subscribe(
     (data:donor[])=>{
       console.log(data);
