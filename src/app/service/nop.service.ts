@@ -18,7 +18,6 @@ export class NopService {
     return this._http.get(this.ngodetailbynopname+nop_name);
   }
   getNgoDetailByNgoEmailId(ngo_email){
-    alert(ngo_email);
     
     return this._http.get(this.ngo+ngo_email);
   }

@@ -1,7 +1,7 @@
 <app-header></app-header>
 
- <!-- our_volunteer_area_start  -->
- <div class="our_volunteer_area section_padding">
+<!-- our_volunteer_area_start  -->
+<div class="our_volunteer_area section_padding">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -11,14 +11,15 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6" *ngFor="let item of ngodetail_arr"  style="padding:20px;" >
-                                <div class="single_volenteer">
+            <div class="col-lg-4 col-md-6" *ngFor="let item of ngodetail_arr" style="padding:20px;">
+                <div class="single_volenteer">
                     <div class="volenteer_thumb">
-                        <img src="{{'http://localhost:3000/logo_images/'+item.ngo_logo}}"  alt="" style="height:270px; width:230px;">
+                        <img src="{{'http://localhost:3000/logo_images/'+item.ngo_logo}}" alt=""
+                            style="height:270px; width:230px;">
                     </div>
-                    <div class="voolenteer_info d-flex align-items-end" >
-                        <div class="social_links" >
-                            <ul >
+                    <div class="voolenteer_info d-flex align-items-end">
+                        <div class="social_links">
+                            <ul>
                                 <li>
                                     <a href="{{item.facebook}}"> <i class="fa fa-facebook"></i> </a>
                                 </li>
@@ -37,12 +38,14 @@
                             <h4 style="margin-left:-15%;">{{item.ngo_name}}</h4>
                             <p>{{item.ngo_contact}}</p>
                             <!-- <p style="margin-left:150%;">{{item.ngo_city}}</p> -->
-                          <div style="margin-left:70%; margin-top:-20%;"> 
-                          <button class="btn btn-primary" style=" height:40px; width:90px; font-size:10px; background-color: #3CC78F; border:none; " (click)="onDonoate(item.ngo_email)">More Detail</button>
-                          </div>
-      
+                            <div style="margin-left:70%; margin-top:-20%;">
+                                <button class="btn btn-primary"
+                                    style=" height:40px; width:90px; font-size:10px; background-color: #3CC78F; border:none; "
+                                    (click)="onDonoate(item.ngo_email)">More Detail</button>
+                            </div>
+
                         </div>
-                      
+
                     </div>
                 </div>
             </div>

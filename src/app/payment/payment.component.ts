@@ -31,32 +31,32 @@ ngo_email:string;
     //     console.log(data);
     //     this.nop_arr=data;
     //     console.log(this.nop_arr);
-       
+
     //   });
     this._nopService.getNgoDetailByNgoEmailId(this.ngo_email).subscribe(
       (data:any)=>{
         this.ngodetail_arr=data;
         this.ngo_name=data[0].ngo_name;
         console.log(this.ngodetail_arr);
-        
+
       });
       this.donate_from_donor_email=localStorage.getItem('donor_email');
   }
   selectChangeHandler(event)
   {
     this.fk_nop_name=event.target.value;
-      
+
       console.log(this.fk_nop_name);
       this.flag=true;
       // this._nopService.getNgoDetailByNopName(this.fk_nop_name).subscribe(
       //   (data:any)=>{
       //     this.ngodetail_arr=data;
-         
+
       //     console.log(this.ngodetail_arr);
       //   });
-    
+
     //console.log(this.ngo_name);
-  
+
   }
   onAddPayment()
   {
@@ -67,9 +67,10 @@ ngo_email:string;
         console.log(data);
         alert('record addee succesfully');
         this._route.navigate(['/menu']);
+        window.open('http://localhost:3000/paytm/','_parent');
       }
     );
-     
+
   }
 
   addform(f)

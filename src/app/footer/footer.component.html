@@ -1,94 +1,94 @@
 <!-- footer_start  -->
 <footer class="footer">
-    <div class="footer_top">
-      <div class="container">
-          <div class="row">
-              <div class="col-xl-4 col-md-6 col-lg-4 ">
-                  <div class="footer_widget">
-                      <div class="footer_logo">
-                          <a href="#">
-                              <!-- <img src="assets/img/footer_logo.png" alt=""> -->
-                              <img src="assets/img/logo.png" alt="" style="height:95px; width:230px; zoom:120%; margin-left:-30px;">
+  <div class="footer_top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-6 col-lg-4 ">
+          <div class="footer_widget">
+            <div class="footer_logo">
+              <a href="#">
+                <!-- <img src="assets/img/footer_logo.png" alt=""> -->
+                <img src="assets/img/logo.png" alt="" style="height:95px; width:230px; zoom:120%; margin-left:-30px;">
 
-                          </a>
-                      </div>
-                      <!-- <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.
+              </a>
+            </div>
+            <!-- <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.
                       </p> -->
-                      <div class="socail_links">
-                          <ul>
-                              <li>
-                                  <a href="#">
-                                      <i class="ti-facebook"></i>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#">
-                                      <i class="ti-twitter-alt"></i>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#">
-                                      <i class="fa fa-dribbble"></i>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#">
-                                      <i class="fa fa-instagram"></i>
-                                  </a>
-                              </li>
-                          </ul>
-                      </div>
-    
-                  </div>
-              </div>
-              <div class="col-xl-2 col-md-6 col-lg-2">
-                  <div class="footer_widget">
-                      <h3 class="footer_title">
-                          Services
-                      </h3>
-                      <ul class="links">
-                          <li><a routerLink="/contact">Contact</a></li>
-                          <li><a routerLink="/about">About</a></li>
-                          <li><a routerLink="/blog">Blog</a></li>
-                          <li><a routerLink="/menu">Nop</a></li>
-                        
-                      </ul>
-                  </div>
-              </div>
-              <div class="col-xl-3 col-md-6 col-lg-3">
-                  <div class="footer_widget">
-                      <h3 class="footer_title">
-                          Contacts
-                      </h3>
-                      <div class="contacts">
-                          <p>+2(305) 587-3407 <br>
-                              info@loveuscharity.com <br>
-                              Flat 20, Reynolds Neck, North
-                              Helenaville, FV77 8WS
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-3 col-md-6 col-lg-3">
-                  <div class="footer_widget" >
-                      <h3 class="footer_title">
-                          Top News
-                      </h3>
-                      <ul class="news_links" *ngFor="let item of news_arr">
-                          <li>
-                              <div class="thumb" >
-                                  <a href="#">
-                                      <img src="{{item.urlToImage}}" alt="">
-                                  </a>
-                              </div>
-                              <div class="info">
-                                  <a href="{{item.url}}">
-                                      <h4>{{item.author}}</h4>
-                                  </a>
-                                  <span>{{item.publishedAt | date}}</span>
-                              </div>
-                          </li>
-                          <!-- <li>
+            <div class="socail_links">
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/shrenik.dalal.71">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/shre_nik._dalal/?hl=en">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/shrenik-dalal-89304b166/">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/Shrenik_09">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-6 col-lg-2">
+          <div class="footer_widget">
+            <h3 class="footer_title">
+              Services
+            </h3>
+            <ul class="links">
+              <li><a routerLink="/contact">Contact</a></li>
+              <li><a routerLink="/about">About</a></li>
+              <li><a routerLink="/blog">News</a></li>
+              <li><a routerLink="/menu">Nop</a></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-lg-3">
+          <div class="footer_widget">
+            <h3 class="footer_title">
+              Contacts
+            </h3>
+            <div class="contacts">
+              <p>+91 878 003 2195<br>
+                ngofinder72@gmail.com<br>
+                DAIICT,Reliance Cross Road
+                Gandhinagar,Gujarat
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-lg-3">
+          <div class="footer_widget">
+            <h3 class="footer_title">
+              Top News
+            </h3>
+            <ul class="news_links" *ngFor="let item of news_arr">
+              <li>
+                <div class="thumb">
+                  <a href="#">
+                    <img src="{{item.urlToImage}}" alt="">
+                  </a>
+                </div>
+                <div class="info">
+                  <a href="{{item.url}}">
+                    <h4>{{item.author}}</h4>
+                  </a>
+                  <span>{{item.publishedAt | date}}</span>
+                </div>
+              </li>
+              <!-- <li>
                               <div class="thumb">
                                   <a href="#">
                                       <img src="assets/img/news/news_2.png" alt="">
@@ -96,18 +96,17 @@
                               </div>
                               <div class="info">
                                   <a href="#">
-                                      <h4>School for African 
+                                      <h4>School for African
                                           Childrens</h4>
                                   </a>
                                   <span>Jun 12, 2019</span>
                               </div>
                           </li> -->
-                      </ul>
-                  </div>
-              </div>
+            </ul>
           </div>
+        </div>
       </div>
     </div>
-    </footer>
-    <!-- footer_end  -->
-    
+  </div>
+</footer>
+<!-- footer_end  -->

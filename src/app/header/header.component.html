@@ -1,90 +1,91 @@
 <header>
-    <div class="header-area ">
-      <div class="header-top_area">
-          <div class="container-fluid">
-              <div class="row">
-                  <div class="col-xl-6 col-md-12 col-lg-8">
-                      <div class="short_contact_list">
-                          <ul>
-                              <li><a href="tel:+91 878 003 2195"> <i class="fa fa-phone"></i> +91 878 003 2195</a></li>
-                              <li><a href="mailto:ngofinder27@gmail.com?Subject=Hello%20again" > <i class="fa fa-envelope"></i>ngofinder27@gmail.com</a></li>
-                          </ul>
-                      </div>
-                  </div>
-                  <!-- <div class="col-xl-6 col-md-6 col-lg-4">
-                      <div class="social_media_links d-none d-lg-block">
-                          <a href="#">
-                              <i class="fa fa-facebook"></i>
-                          </a>
-                          <a href="#">
-                              <i class="fa fa-pinterest-p"></i>
-                          </a>
-                          <a href="#">
-                              <i class="fa fa-linkedin"></i>
-                          </a>
-                          <a href="#">
-                              <i class="fa fa-twitter"></i>
-                          </a>
-                      </div>
-                  </div> -->
-              </div>
+  <div class="header-area ">
+    <div class="header-top_area">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-6 col-md-12 col-lg-8">
+            <div class="short_contact_list">
+              <ul>
+                <li><a href="tel:+91 878 003 2195"> <i class="fa fa-phone"></i> +91 878 003 2195</a></li>
+                <li><a href="mailto:ngofinder27@gmail.com?Subject=Hello%20again"> <i
+                      class="fa fa-envelope"></i>ngofinder27@gmail.com</a></li>
+              </ul>
+            </div>
           </div>
+          <div class="col-xl-6 col-md-6 col-lg-4">
+            <div class="social_media_links d-none d-lg-block">
+              <a href="https://www.facebook.com/shrenik.dalal.71">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/shre_nik._dalal/?hl=en">
+                <i class="fa fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/shrenik-dalal-89304b166/">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com/Shrenik_09">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="sticky-header" class="main-header-area">
-          <div class="container-fluid" >
-              <div class="row align-items-center" >
-                  <div class="col-xl-3 col-lg-3">
-                      <div class="logo">
-                          <a href="index.html">
-                            <img src="assets/img/logo.png" alt="" style="height:75px; width:200px; zoom:120%;">
-                          </a>
-                      </div>
-                  </div>
-                  <div class="col-xl-9 col-lg-9">
-                      <div class="main-menu">
-                          <nav  >
-                              <ul id="navigation" >
-                                  <li><a routerLink="/menu">home</a></li>
-                                  <li><a routerLink="/about">Gallery</a></li>
-                                  <!-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
+    </div>
+    <div id="sticky-header" class="main-header-area">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-xl-3 col-lg-3">
+            <div class="logo">
+              <a href="index.html">
+                <img src="assets/img/logo.png" alt="" style="height:75px; width:200px; zoom:120%;">
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-9">
+            <div class="main-menu">
+              <nav>
+                <ul id="navigation">
+                  <li><a routerLink="/menu">home</a></li>
+                  <li><a routerLink="/about">Gallery</a></li>
+                  <!-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                       <ul class="submenu"> -->
-                                          <li><a routerLink="/blog">News</a></li>
-                                          <!-- <li><a href="single-blog.html">single-blog</a></li>
+                  <li><a routerLink="/blog">News</a></li>
+                  <!-- <li><a href="single-blog.html">single-blog</a></li>
                                       </ul> -->
-                                  <!-- </li> -->
-                                  <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                  <!-- </li> -->
+                  <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                       <ul class="submenu">
                                           <li><a href="elements.html">elements</a></li>
                                           <li><a href="Cause.html">Cause</a></li>
                                       </ul>
                                   </li> -->
-                                  <li><a routerLink="/contact">Contact</a></li>
-                                  <li><img src="../../assets/images1/viewpro3.png" style="height:40px;; width:60px; border-radius:50%;"></li> 
-                      
-                                  <!-- <li *ngFor="let item of donor_arr" ><a href="#">{{item.donor_name}} <i class="ti-angle-down"></i></a> -->
-                                  <li ><a href="#">{{this.donor_name}} <i class="ti-angle-down"></i></a>
-                                    <ul class="submenu">
-                                        <li><a routerLink="/viewprofile">Viewprofile</a></li>
-                                        <li><a routerLink="/changepassword">Change password</a></li>
-                                        <li ><a (click)="onlogout()">Logout</a></li>
-                                    </ul>
-                                </li>
-                                </ul>
-                          </nav>
-                          <div class="Appointment">
-                              <div class="book_btn d-none d-lg-block">
-                                  <!-- <a data-scroll-nav='1' routerLink="/payment">Make a Donate</a> -->
-                              </div>
-                          </div>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                      <div class="mobile_menu d-block d-lg-none"></div>
-                  </div>
+                  <li><a routerLink="/contact">Contact</a></li>
+                  <li><img src="../../assets/images1/viewpro3.png" style="height:40px;; width:60px; border-radius:50%;">
+                  </li>
+
+                  <!-- <li *ngFor="let item of donor_arr" ><a href="#">{{item.donor_name}} <i class="ti-angle-down"></i></a> -->
+                  <li><a href="#">{{this.donor_name}} <i class="ti-angle-down"></i></a>
+                    <ul class="submenu">
+                      <li><a routerLink="/viewprofile">Viewprofile</a></li>
+                      <li><a routerLink="/changepassword">Change password</a></li>
+                      <li><a (click)="onlogout()">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div class="Appointment">
+                <div class="book_btn d-none d-lg-block">
+                  <!-- <a data-scroll-nav='1' routerLink="/payment">Make a Donate</a> -->
+                </div>
               </div>
+            </div>
           </div>
+          <div class="col-12">
+            <div class="mobile_menu d-block d-lg-none"></div>
+          </div>
+        </div>
       </div>
     </div>
-    </header>
-    <!-- header-end -->
-    
+  </div>
+</header>
+<!-- header-end -->
